@@ -9,3 +9,4 @@ Just put the index.html just wherever (you don't need the plist unless you chang
 
 # Misc
 Just so you know, sometimes it takes longer on some devices to crash. If a popup pops up, try scrolling down.
+One more thing, you can also add to homescreen.
